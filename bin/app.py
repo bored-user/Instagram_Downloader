@@ -22,7 +22,7 @@ def handleProfile(page):
     print("Username: " + name)
     print("Facebook conectado: " + str(page["user"]["connected_fb_page"]) + "\n")
     if is_private:
-        if input("Baixar as todas as fotos/ videos (Y/N)? ").upper() == "Y":
+        if input("Baixar todas as fotos/ videos (Y/N)? ").upper() == "Y":
             if not os.path.isdir(name):
                 os.makedirs(name)
             for i in range(len(page["user"]["edge_felix_video_timeline"]["edges"]) - 1):
